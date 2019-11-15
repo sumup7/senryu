@@ -157,4 +157,5 @@ resetButton.onclick = () => {
   removeAllChildren(resultDivided2);
   removeAllChildren(resultDivided3);
   removeAllChildren(comentDivided);
+  removeAllChildren(tweetDivided);
 }
