@@ -1,0 +1,12 @@
+body {
+  background-color: hotpink;
+  color: #FDFFFF;
+  width: 500px;
+  margin-right: auto;
+  margin-left : auto;
+}
+button {
+  padding: 5px 20px;
+  background-color: #c71585;
+  border-style: none;
+}  
