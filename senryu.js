@@ -8,7 +8,7 @@ const resultDivided2 = document.getElementById('result-area2');
 const resultDivided3 = document.getElementById('result-area3');
 const comentDivided = document.getElementById('coment');
 const tweetDivided = document.getElementById('tweet-area');
-
+let poetry1,poetry2;
  /**
 * 指定した要素の子どもを全て削除する
 * @param {HTMLElement} element HTMLの要素
@@ -105,7 +105,7 @@ const answers1 = [
 selectButton1.onclick = () => {
  removeAllChildren(resultDivided1);
  const paragraph1 = document.createElement('h2');
- let poetry1 = select1();
+ poetry1 = select1();
  paragraph1.innerText = poetry1;
  resultDivided1.appendChild(paragraph1);
 }
@@ -113,7 +113,7 @@ selectButton1.onclick = () => {
 selectButton2.onclick = () => {
   removeAllChildren(resultDivided2);
   const paragraph2 = document.createElement('h2');
-  let poetry2 = select2();
+  poetry2 = select2();
   paragraph2.innerText = poetry2;
   resultDivided2.appendChild(paragraph2);
  }
@@ -123,8 +123,6 @@ selectButton3.onclick = () => {
   removeAllChildren(comentDivided);
   let paragraph3 = document.createElement('h2');
   const paragraph4 = document.createElement('p')
-  let poetry1 = select1();
-  let poetry2 = select2();
   let  poetry3 = select3();
   paragraph3.innerText = poetry3;
   paragraph4.innerText = "川柳ぽっくなりましたか？何度も遊んでみてください!!!!";
