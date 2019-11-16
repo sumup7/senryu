@@ -8,7 +8,9 @@ const resultDivided2 = document.getElementById('result-area2');
 const resultDivided3 = document.getElementById('result-area3');
 const comentDivided = document.getElementById('coment');
 const tweetDivided = document.getElementById('tweet-area');
+const resetButtonOne = document.getElementById('resetone');
 let poetry1,poetry2;
+let resetone = 0;
  /**
 * 指定した要素の子どもを全て削除する
 * @param {HTMLElement} element HTMLの要素
@@ -106,6 +108,8 @@ selectButton1.onclick = () => {
  removeAllChildren(resultDivided1);
  const paragraph1 = document.createElement('h2');
  poetry1 = select1();
+ resetone = 1;
+ console.log(resetone);
  paragraph1.innerText = poetry1;
  resultDivided1.appendChild(paragraph1);
 }
@@ -114,6 +118,8 @@ selectButton2.onclick = () => {
   removeAllChildren(resultDivided2);
   const paragraph2 = document.createElement('h2');
   poetry2 = select2();
+  resetone = 2;
+  console.log(resetone);
   paragraph2.innerText = poetry2;
   resultDivided2.appendChild(paragraph2);
  }
@@ -124,6 +130,8 @@ selectButton3.onclick = () => {
   let paragraph3 = document.createElement('h2');
   const paragraph4 = document.createElement('p')
   let  poetry3 = select3();
+  resetone = 3;
+  console.log(resetone);
   paragraph3.innerText = poetry3;
   paragraph4.innerText = "川柳ぽっくなりましたか？何度も遊んでみてください!!!!";
   resultDivided3.appendChild(paragraph3);
@@ -148,7 +156,19 @@ script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
 tweetDivided.appendChild(script);
 
 }
-
+resetButtonOne.onclick = () => {
+  if(resetone === 1){
+    removeAllChildren(resultDivided1);
+  }else if (resetone === 2) {
+    removeAllChildren(resultDivided2);
+  }else if(resetone === 3){
+    removeAllChildren(resultDivided3);
+    removeAllChildren(comentDivided);
+    removeAllChildren(tweetDivided);
+  }else{
+    return;
+  }
+}
 
 resetButton.onclick = () => {
   removeAllChildren(resultDivided1);
@@ -156,4 +176,5 @@ resetButton.onclick = () => {
   removeAllChildren(resultDivided3);
   removeAllChildren(comentDivided);
   removeAllChildren(tweetDivided);
+  resetone = 0;
 }
