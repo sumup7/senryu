@@ -21,62 +21,64 @@ function removeAllChildren(element) {
   }
 }
 const answers1 = [
-`まちむすめ　上田敏`,
-`「ああしんど」	池田 蕉園`,
-`あばばばば　芥川龍之介`,
-`犬と笛　芥川龍之介`,
-`蜘蛛の糸　芥川龍之介`,
-`火事とポチ　有島武郎`,
-`かざぐるま　小川未明`,
-`きりぎりす　太宰治`,
-`女生徒　太宰治`,
-`たずねびと　太宰治`,
-`走れメロス　太宰治`,
-`さがしもの　土田 耕平`,
-`花が咲く　徳田 秋声`,
-`不如帰　徳冨 蘆花`,
-`田舎者　豊島 与志雄`,
-`花ふぶき　豊島 与志雄`,
-`変な男　豊島 与志雄`,
-`銀の匙　中 勘助`,
-`すみだ川　永井 荷風`,
-`にぎり飯　永井 荷風`,
-`白い雲　小川未明`,
-`白いくま　小川未明`,
-`子ども達　林 芙美子`,
-`たけくらべ　樋口一葉`,
-`花ごもり　樋口一葉`,
-`琴の音　樋口一葉`,
-`風立ちぬ　堀辰雄`,
+`まちむすめ　/上田敏`,
+`「ああしんど」	/池田 蕉園`,
+`あばばばば　/芥川龍之介`,
+`犬と笛　/芥川龍之介`,
+`蜘蛛の糸　/芥川龍之介`,
+`火事とポチ　/有島武郎`,
+`かざぐるま　/小川未明`,
+`きりぎりす　/太宰治`,
+`女生徒　/太宰治`,
+`たずねびと　/太宰治`,
+`走れメロス　/太宰治`,
+`さがしもの　/土田 耕平`,
+`花が咲く　/徳田 秋声`,
+`不如帰　/徳冨 蘆花`,
+`田舎者　/豊島 与志雄`,
+`花ふぶき　/豊島 与志雄`,
+`変な男　/豊島 与志雄`,
+`銀の匙　/中 勘助`,
+`すみだ川　/永井 荷風`,
+`にぎり飯　/永井 荷風`,
+`白い雲　  /小川未明`,
+`白いくま  /小川未明`,
+`子ども達  /林 芙美子`,
+`たけくらべ　/樋口一葉`,
+`花ごもり　/樋口一葉`,
+`琴の音　/樋口一葉`,
+`風立ちぬ　/堀辰雄`,
+
   ];
   const answers2 = [
-    `無念女工 榎南 謙一`,
-    `小さき者へ　有島武`,
-    `呼ばれし乙女　岡本かの子`,
+    `無念女工 /榎南 謙一`,
+    `小さき者へ　/有島武`,
+    `呼ばれし乙女　/岡本かの子`,
     `赤いえりまき　小川未明`,
     `秋が　きました　小川未明`,
-    `秋のお約束　小川未明`,
-    `朝の公園　小川未明`,
-    `生きぬく力　小川未明`,
-    `海のまぼろし　小川未明`,
-    `いろいろな花　小川未明`,
-    `風はささやく　小川未明`,
-    `つめたい　メロン　小川未明`,
-    `どこで笛吹く　小川未明`,
-    `春が来る前　小川未明`,
-    `ぐうたら戦記　坂口安吾`,
-    `街はふるさと　坂口安吾`,
-    `あさましきもの  太宰治`,
-    `女の決闘　太宰治`,
-    `人間失格　太宰治`,
-    `パンドラの匣　太宰治`,
-    `新茶のかおり　田山花袋`,
-    `悪魔の宝    豊島与志雄`,
-    `地図にない街　橋本五郎`,
-    `生爪を剥ぐ 　葉山嘉樹`,
-    `真夏日の散歩　原民喜`,
-    `星のわななき  原民喜`,
-    `あなたも私も　久生十蘭`,
+    `秋のお約束　/小川未明`,
+    `朝の公園　/小川未明`,
+    `生きぬく力　/小川未明`,
+    `海のまぼろし　/小川未明`,
+    `いろいろな花　/小川未明`,
+    `風はささやく　/小川未明`,
+    `つめたい　メロン　/小川未明`,
+    `どこで笛吹く　/小川未明`,
+    `春が来る前　/小川未明`,
+    `ぐうたら戦記　/坂口安吾`,
+    `街はふるさと　/坂口安吾`,
+    `あさましきもの  /太宰治`,
+    `女の決闘　/太宰治`,
+    `人間失格　/太宰治`,
+    `パンドラの匣　/太宰治`,
+    `新茶のかおり　/田山花袋`,
+    `悪魔の宝    /豊島与志雄`,
+    `地図にない街　/橋本五郎`,
+    `生爪を剥ぐ 　/葉山嘉樹`,
+    `真夏日の散歩　/原民喜`,
+    `星のわななき  /原民喜`,
+    `あなたも私も　/久生十蘭`,
+
   ];
   
   /**
@@ -105,6 +107,7 @@ const answers1 = [
   }
 //セレクトボタン１を押すと最初の５文字が表示される。
 selectButton1.onclick = () => {
+  if(resetone===0){
  removeAllChildren(resultDivided1);
  const paragraph1 = document.createElement('h2');
  poetry1 = select1();
@@ -112,9 +115,10 @@ selectButton1.onclick = () => {
  console.log(resetone);
  paragraph1.innerText = poetry1;
  resultDivided1.appendChild(paragraph1);
-}
+}};
 //セレクトボタン２を押すと２番目のの７文字が表示される。
 selectButton2.onclick = () => {
+  if(resetone===1){
   removeAllChildren(resultDivided2);
   const paragraph2 = document.createElement('h2');
   poetry2 = select2();
@@ -122,9 +126,10 @@ selectButton2.onclick = () => {
   console.log(resetone);
   paragraph2.innerText = poetry2;
   resultDivided2.appendChild(paragraph2);
- }
+ }};
 //セレクトボタン３を押すと最後の５文字とコメントが表示される。
 selectButton3.onclick = () => {
+  if(resetone===2){
   removeAllChildren(resultDivided3);
   removeAllChildren(comentDivided);
   let paragraph3 = document.createElement('h2');
@@ -138,7 +143,11 @@ selectButton3.onclick = () => {
   comentDivided.appendChild(paragraph4);
  
   //ツイートエリアの作成
-let result = poetry1 + poetry2 + poetry3;
+  //各行の単語と作者を分けて配列にしツイートボタン内で川柳+（作者）3人分にする。
+let senryu1 = poetry1.split('/');
+let senryu2 = poetry2.split('/');
+let senryu3 = poetry3.split('/');
+let result = senryu1[0]+ senryu2[0] + senryu3[0] + '('+senryu1[1] + ')' + '(' + senryu2[1] +')'+ '(' + senryu3[1] + ')';
 removeAllChildren(tweetDivided);
 const anchor = document.createElement('a');
 const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag='
@@ -155,16 +164,19 @@ const script = document.createElement('script');
 script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
 tweetDivided.appendChild(script);
 
-}
+}};
 resetButtonOne.onclick = () => {
   if(resetone === 1){
     removeAllChildren(resultDivided1);
+    resetone--;
   }else if (resetone === 2) {
     removeAllChildren(resultDivided2);
+    resetone--;
   }else if(resetone === 3){
     removeAllChildren(resultDivided3);
     removeAllChildren(comentDivided);
     removeAllChildren(tweetDivided);
+    resetone--;
   }else{
     return;
   }
